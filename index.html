@@ -3,28 +3,114 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Day 5</title>
+		<style>
+			.newNumber{
+				border: 2px solid black;
+			}
+		</style>
 	</head>
 	<body>
+		<ul class="ulClass" id="getList">
+			<li class="inner">A</li>
+			<li class="inner">B</li>
+			<li class="inner">C</li>
+			<li class="inner">D</li>
+			<li class="inner">E</li>
+			<li class="inner">F</li>
+			<li class="inner">G</li>
+		</ul>
 
+		<div id="cost"></div>
 
+		<h2>random number</h2>
+		<p id="info">Begin</p>
+		<button class="newNumber" id="newNumber">New Number</button>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 		<script>
-		var myObj = {
-			aProperty: 'first property',
-			bProperty: 'second property',
-			cProperty: 'third property',
-			innerObjOne: {
-				dProperty: '4 property',
-				eProperty: '5 property',
-				fProperty: '6 property'
-			},
-			innerObjTwo: {
-				a: 1,
-				b: 2,
-				c: 3
-			}
-		};
-		var myArray = [1,2,3,4];
-		console.log(myObj.innerObjOne.fProperty);
+		// First object section
+
+		// var myObj = {
+		// 	aProperty: 'first property',
+		// 	bProperty: 'second property',
+		// 	cProperty: 'third property',
+		// 	innerObjOne: {
+		// 		dProperty: '4 property',
+		// 		eProperty: '5 property',
+		// 		fProperty: '6 property'
+		// 	},
+		// 	innerObjTwo: {
+		// 		a: 1,
+		// 		b: 2,
+		// 		c: 3,
+		// 		dArray: ['a', 'b', 'c', {
+		// 			arrayProp: 'really'
+		// 		}]
+		// 	},
+		// 	aMethod: function (a, b) {
+		// 		var sum = a + b;
+		// 		console.log(sum);
+		// 	}
+		// };
+		//
+		// myObj.aMethod(myObj.innerObjTwo.a, 22)
+		//
+		// var myArray = [1,2,3,4];
+		// console.log(myObj.innerObjTwo.dArray[3].arrayProp);
+
+		//Second object section
+
+		// var myObj = {
+		// 	aProperty: 'first property',
+		// 	bProperty: 'second property',
+		// 	cProperty: 'third property',
+		// 	innerObjOne: {
+		// 		dProperty: '4 property',
+		// 		eProperty: '5 property',
+		// 		fProperty: '6 property'
+		// 	},
+		// 	innerObjTwo: {
+		// 		a: 1,
+		// 		b: 2,
+		// 		c: 3,
+		// 		dArray: ['a', 'b', 'c', {
+		// 			arrayProp: 'really'
+		// 		}]
+		// 	},
+		// 	aMethod: function () {
+		// 		alert(myObj.innerObjTwo.dArray[3].arrayProp)
+		// 	}
+		// };
+
+		// setTimeout(myObj.aMethod, 8000);
+
+		// var getList = document.getElementsByClassName('inner');
+		// console.dir(getList);
+
+		// var getJquery = $(".inner");
+		// console.log(getJquery);
+
+		//Task1
+
+		// var items = {
+		// 	price: 5,
+		// 	quantity: 14,
+		// 	aMethod: function(){
+		// 		var total = items.price * items.quantity;
+		// 		var el = document.getElementById('cost');
+		// 		el.textContent = '$' + total;
+		// 	}
+		// }
+		//
+		// items.aMethod()
+
+
+		$('.newNumber').click(function(){
+			var randomNum = Math.floor((Math.random() * 10) + 1);
+			// $('#info').append('<br />' + randomNum);
+			$('#info').text(randomNum);
+		});
+
 		</script>
 	</body>
 </html>
